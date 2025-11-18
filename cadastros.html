@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastro para voluntários e doadores da ONG União">
+    <title>Cadastro - ONG União</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>ONG União</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html" class="active">Cadastro</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho da Página -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Cadastro</h1>
+            <p>Junte-se à ONG União como voluntário ou doador</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="form-section">
+            <div class="container">
+                <form id="cadastroForm" method="POST" action="#">
+                    <!-- Seção: Informações Pessoais -->
+                    <fieldset>
+                        <legend><h2>Informações Pessoais</h2></legend>
+
+                        <div class="form-group">
+                            <label for="nome">Nome Completo <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="nome" 
+                                name="nome" 
+                                required 
+                                placeholder="Digite seu nome completo"
+                                minlength="3"
+                                maxlength="100"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail <span class="required">*</span></label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="seu.email@exemplo.com"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpf">CPF <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="cpf" 
+                                name="cpf" 
+                                required 
+                                placeholder="000.000.000-00"
+                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                                title="CPF deve estar no formato: 000.000.000-00"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone <span class="required">*</span></label>
+                            <input 
+                                type="tel" 
+                                id="telefone" 
+                                name="telefone" 
+                                required 
+                                placeholder="(11) 98765-4321"
+                                pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                                title="Telefone deve estar no formato: (11) 98765-4321"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dataNascimento">Data de Nascimento <span class="required">*</span></label>
+                            <input 
+                                type="date" 
+                                id="dataNascimento" 
+                                name="dataNascimento" 
+                                required
+                            >
+                        </div>
+                    </fieldset>
+
+                    <!-- Seção: Endereço -->
+                    <fieldset>
+                        <legend><h2>Endereço</h2></legend>
+
+                        <div class="form-group">
+                            <label for="endereco">Endereço <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="endereco" 
+                                name="endereco" 
+                                required 
+                                placeholder="Rua, número e complemento"
+                                minlength="5"
+                                maxlength="150"
+                            >
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cep">CEP <span class="required">*</span></label>
+                                <input 
+                                    type="text" 
+                                    id="cep" 
+                                    name="cep" 
+                                    required 
+                                    placeholder="00000-000"
+                                    pattern="\d{5}-\d{3}"
+                                    title="CEP deve estar no formato: 00000-000"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cidade">Cidade <span class="required">*</span></label>
+                                <input 
+                                    type="text" 
+                                    id="cidade" 
+                                    name="cidade" 
+                                    required 
+                                    placeholder="São Paulo"
+                                    minlength="2"
+                                    maxlength="50"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="estado">Estado <span class="required">*</span></label>
+                                <select id="estado" name="estado" required>
+                                    <option value="">Selecione um estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Seção: Tipo de Participação -->
+                    <fieldset>
+                        <legend><h2>Como Você Deseja Participar?</h2></legend>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="participacao" value="voluntario">
+                                Quero ser voluntário
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="participacao" value="doador">
+                                Quero ser doador
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="participacao" value="ambos">
+                                Ambos (Voluntário e Doador)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Seção: Mensagem Adicional -->
+                    <fieldset>
+                        <legend><h2>Informações Adicionais</h2></legend>
+
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem (Opcional)</label>
+                            <textarea 
+                                id="mensagem" 
+                                name="mensagem" 
+                                placeholder="Conte-nos mais sobre você e seus interesses..."
+                                rows="5"
+                                maxlength="500"
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="termos" required>
+                                Concordo com os <a href="#" target="_blank">termos e condições</a> <span class="required">*</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Botões -->
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                        <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ONG União. Todos os direitos reservados.</p>
+            <p>Unindo pessoas de diferentes raças para um Brasil melhor.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/form-validation.js"></script>
+</body>
+</html>
